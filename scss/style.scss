@@ -13,5 +13,47 @@
 }
 
 header {
-	@include wrapper(800, 50);
+	background-color: $tertiary_clr;
+	height: 80px;
+	@include media-max-width(600) {
+		height: auto;
+	}
+	nav {
+		height: 100%;
+		padding: 0 2em;
+		ul {
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include media-max-width(1000) {
+				justify-content: left;
+			}
+
+			@include media-max-width(600) {
+				flex-direction: column;
+				padding: 1em;
+			}
+
+			li {
+				margin-right: 2em;
+				@include media-max-width(600) {
+					margin-bottom: 1em;
+				}
+			}
+
+			a {
+				color: $primary_clr;
+			}
+			img {
+				width: 50px;
+			}
+		}
+	}
+
+	@include media-max-width(1000) {
+		.logo {
+			display: none;
+		}
+	}
 }
