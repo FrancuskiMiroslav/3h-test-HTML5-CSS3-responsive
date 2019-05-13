@@ -3,13 +3,14 @@
 
 @include main;
 
-.box {
-	@for $i from 1 through 6 {
-		&.box#{$i} {
-			background: url("../slike/#{$i}.jpg");
-			background-size: cover;
-		}
-	}
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+h4 {
+	text-align: center;
+	color: $secondary_clr;
 }
 
 header {
@@ -97,4 +98,172 @@ main {
 			border: none;
 		}
 	}
+	#users {
+		background-color: $tertiary_clr;
+		padding: 2em 0;
+		h2,
+		h3,
+		h4 {
+			text-align: center;
+			margin-bottom: 2em;
+		}
+	}
+	.boxes {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		grid-gap: 3em;
+		margin-bottom: 2em;
+		@include wrapper(1200, 50);
+		p {
+			text-align: justify;
+		}
+
+		&_box {
+			padding: 1em;
+			&:hover {
+				background-color: $primary_clr;
+				border-radius: 5%;
+				.boxes_box_img {
+					background-color: $secondary_clr;
+					border-radius: 50%;
+				}
+
+				h3,
+				p {
+					color: #ffffff;
+				}
+			}
+		}
+
+		&_box_img {
+			width: 100px;
+			height: 100px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 auto;
+			img {
+				width: 70%;
+				height: 70%;
+			}
+		}
+	}
+
+	#contact {
+		@include media-max-width(600) {
+			display: none;
+		}
+
+		padding: 2em;
+		h2,
+		h4 {
+			margin-bottom: 2em;
+		}
+		.form {
+			background-color: $tertiary_clr;
+			height: 100%;
+			width: 58%;
+			padding: 28px;
+			margin: 0 auto;
+
+			@include media-max-width(1100) {
+				margin-top: 20px;
+				width: 100%;
+			}
+
+			select,
+			textarea,
+			input {
+				padding: 10px;
+				border: 1px solid $primary_clr;
+			}
+
+			&_row {
+				display: flex;
+				justify-content: space-between;
+
+				select {
+					width: 21%;
+				}
+
+				input[type="text"] {
+					width: 39%;
+				}
+			}
+
+			input[type="email"],
+			textarea {
+				display: block;
+				width: 100%;
+				margin-top: 28px;
+			}
+			.btn {
+				background-color: $secondary_clr;
+				border: none;
+				border-radius: 0 0px 15px 15px;
+				color: $tertiary_clr;
+				width: 100%;
+				padding: 1em 2em;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 20px;
+				margin: 2em auto 0 auto;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.bottom {
+		background-color: $primary_clr;
+		padding: 2.5em 5em;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		@include media-max-width(1100) {
+			display: block;
+			text-align: center;
+		}
+
+		.bottom-nav {
+			@include media-max-width(700) {
+				margin-top: 1em;
+			}
+		}
+
+		p {
+			color: #ffffff;
+			margin-bottom: 1em;
+		}
+
+		span {
+			color: $secondary_clr;
+		}
+
+		ul {
+			display: flex;
+			@include media-max-width(1100) {
+				justify-content: center;
+			}
+
+			@include media-max-width(700) {
+				display: block;
+			}
+
+			li {
+				font-size: 12px;
+				margin-right: 1em;
+				@include media-max-width(700) {
+					margin: 0 0 1em 0;
+				}
+			}
+		}
+	}
+}
+
+footer {
+	text-align: center;
+	background-color: $secondary_clr;
+	color: #ffffff;
+	padding: 1em;
 }
