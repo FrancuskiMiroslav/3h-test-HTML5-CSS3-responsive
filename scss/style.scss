@@ -37,6 +37,7 @@ header {
 
 			li {
 				margin-right: 2em;
+				text-transform: uppercase;
 				@include media-max-width(600) {
 					margin-bottom: 1em;
 				}
@@ -54,6 +55,46 @@ header {
 	@include media-max-width(1000) {
 		.logo {
 			display: none;
+		}
+	}
+}
+
+main {
+	.banner {
+		background-image: url(../slike/hero.jpg);
+		background-size: cover;
+		height: calc(100vh - 80px);
+		display: flex;
+		flex-wrap: wrap;
+
+		@include media-max-width(600) {
+			background-image: none;
+			background-color: $primary_clr;
+		}
+
+		&_content {
+			color: #ffffff;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 15%;
+			flex-direction: column;
+		}
+
+		h1 {
+			background-color: rgba($color: $primary_clr, $alpha: 0.7);
+			height: 100px;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&_btn {
+			@include btn;
+			background-color: $secondary_clr;
+			border: none;
 		}
 	}
 }
