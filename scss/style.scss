@@ -1,0 +1,17 @@
+@import "vars";
+@import "mixins";
+
+@include main;
+
+.box {
+	@for $i from 1 through 6 {
+		&.box#{$i} {
+			background: url("../slike/#{$i}.jpg");
+			background-size: cover;
+		}
+	}
+}
+
+header {
+	@include wrapper(800, 50);
+}
