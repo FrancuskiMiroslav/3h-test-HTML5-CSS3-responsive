@@ -1,0 +1,466 @@
+/*! project-name v0.0.1 | (c) 2020 Francuski Miroslav | MIT License | http://link-to-your-git-repo.com */
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Baloo+Bhai");
+/* line 2, src/sass/_mixins.scss */
+html {
+  scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* line 8, src/sass/_mixins.scss */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 16, src/sass/_mixins.scss */
+ul,
+ol {
+  list-style: none;
+}
+
+/* line 21, src/sass/_mixins.scss */
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* line 6, src/sass/style.scss */
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 11, src/sass/style.scss */
+h4 {
+  text-align: center;
+  color: #d65a31;
+}
+
+/* line 16, src/sass/style.scss */
+header {
+  background-color: #eeeeee;
+  height: 80px;
+}
+
+@media (max-width: 600px) {
+  /* line 16, src/sass/style.scss */
+  header {
+    height: auto;
+  }
+}
+
+/* line 22, src/sass/style.scss */
+header nav {
+  height: 100%;
+  padding: 0 2em;
+}
+
+/* line 25, src/sass/style.scss */
+header nav ul {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1000px) {
+  /* line 25, src/sass/style.scss */
+  header nav ul {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+}
+
+@media (max-width: 600px) {
+  /* line 25, src/sass/style.scss */
+  header nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1em;
+  }
+}
+
+/* line 39, src/sass/style.scss */
+header nav ul li {
+  margin-right: 2em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  /* line 39, src/sass/style.scss */
+  header nav ul li {
+    margin-bottom: 1em;
+  }
+}
+
+/* line 47, src/sass/style.scss */
+header nav ul a {
+  color: #222831;
+}
+
+/* line 50, src/sass/style.scss */
+header nav ul img {
+  width: 50px;
+}
+
+@media (max-width: 1000px) {
+  /* line 57, src/sass/style.scss */
+  header .logo {
+    display: none;
+  }
+}
+
+/* line 64, src/sass/style.scss */
+main .banner {
+  background-image: url(../slike/hero.jpg);
+  background-size: cover;
+  height: calc(100vh - 80px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  /* line 64, src/sass/style.scss */
+  main .banner {
+    background-image: none;
+    background-color: #222831;
+  }
+}
+
+/* line 76, src/sass/style.scss */
+main .banner_content {
+  color: #ffffff;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 15%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 86, src/sass/style.scss */
+main .banner h1 {
+  background-color: rgba(34, 40, 49, 0.7);
+  height: 100px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 95, src/sass/style.scss */
+main .banner_btn {
+  border: 1px solid #eeeeee;
+  color: #eeeeee;
+  padding: 1em 2em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 30px auto;
+  cursor: pointer;
+  background-color: #d65a31;
+  border: none;
+}
+
+/* line 101, src/sass/style.scss */
+main #users {
+  background-color: #eeeeee;
+  padding: 2em 0;
+}
+
+/* line 104, src/sass/style.scss */
+main #users h2,
+main #users h3,
+main #users h4 {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+/* line 111, src/sass/style.scss */
+main .boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+@media (max-width: 1000px) {
+  /* line 111, src/sass/style.scss */
+  main .boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+/* line 124, src/sass/style.scss */
+main .boxes p {
+  text-align: justify;
+}
+
+/* line 128, src/sass/style.scss */
+main .boxes_box {
+  -ms-flex-preferred-size: calc(30% - 20px);
+      flex-basis: calc(30% - 20px);
+  padding: 20px;
+  margin: 10px;
+  padding: 1em;
+}
+
+/* line 133, src/sass/style.scss */
+main .boxes_box:hover {
+  background-color: #222831;
+  border-radius: 5%;
+}
+
+/* line 136, src/sass/style.scss */
+main .boxes_box:hover .boxes_box_img {
+  background-color: #d65a31;
+  border-radius: 50%;
+}
+
+/* line 141, src/sass/style.scss */
+main .boxes_box:hover h3,
+main .boxes_box:hover p {
+  color: #ffffff;
+}
+
+/* line 148, src/sass/style.scss */
+main .boxes_box_img {
+  width: 100px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+/* line 155, src/sass/style.scss */
+main .boxes_box_img img {
+  width: 70%;
+  height: 70%;
+}
+
+/* line 162, src/sass/style.scss */
+main #contact {
+  padding: 2em;
+}
+
+@media (max-width: 600px) {
+  /* line 162, src/sass/style.scss */
+  main #contact {
+    display: none;
+  }
+}
+
+/* line 168, src/sass/style.scss */
+main #contact h2,
+main #contact h4 {
+  margin-bottom: 2em;
+}
+
+/* line 172, src/sass/style.scss */
+main #contact .form {
+  background-color: #eeeeee;
+  height: 100%;
+  width: 58%;
+  padding: 28px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1100px) {
+  /* line 172, src/sass/style.scss */
+  main #contact .form {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+/* line 184, src/sass/style.scss */
+main #contact .form select,
+main #contact .form textarea,
+main #contact .form input {
+  padding: 10px;
+  border: 1px solid #222831;
+}
+
+/* line 191, src/sass/style.scss */
+main #contact .form_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 195, src/sass/style.scss */
+main #contact .form_row select {
+  width: 21%;
+}
+
+/* line 199, src/sass/style.scss */
+main #contact .form_row input[type="text"] {
+  width: 39%;
+}
+
+/* line 204, src/sass/style.scss */
+main #contact .form input[type="email"],
+main #contact .form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 28px;
+}
+
+/* line 210, src/sass/style.scss */
+main #contact .form .btn {
+  background-color: #d65a31;
+  border: none;
+  border-radius: 0 0px 15px 15px;
+  color: #eeeeee;
+  width: 100%;
+  padding: 1em 2em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 2em auto 0 auto;
+  cursor: pointer;
+}
+
+/* line 227, src/sass/style.scss */
+main .bottom {
+  background-color: #222831;
+  padding: 2.5em 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 1100px) {
+  /* line 227, src/sass/style.scss */
+  main .bottom {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  /* line 238, src/sass/style.scss */
+  main .bottom .bottom-nav {
+    margin-top: 1em;
+  }
+}
+
+/* line 244, src/sass/style.scss */
+main .bottom p {
+  color: #ffffff;
+  margin-bottom: 1em;
+}
+
+/* line 249, src/sass/style.scss */
+main .bottom span {
+  color: #d65a31;
+}
+
+/* line 253, src/sass/style.scss */
+main .bottom ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1100px) {
+  /* line 253, src/sass/style.scss */
+  main .bottom ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 700px) {
+  /* line 253, src/sass/style.scss */
+  main .bottom ul {
+    display: block;
+  }
+}
+
+/* line 263, src/sass/style.scss */
+main .bottom ul li {
+  font-size: 12px;
+  margin-right: 1em;
+}
+
+@media (max-width: 700px) {
+  /* line 263, src/sass/style.scss */
+  main .bottom ul li {
+    margin: 0 0 1em 0;
+  }
+}
+
+/* line 274, src/sass/style.scss */
+footer {
+  text-align: center;
+  background-color: #d65a31;
+  color: #ffffff;
+  padding: 1em;
+}
